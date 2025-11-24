@@ -1,0 +1,35 @@
+@font-face {
+  font-family: source_sans;
+  src: url(../../font/source_sans/SourceSans3-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: open_sans;
+  src: url(../../font/open_sans/OpenSans-VariableFont_wdth\,wght.ttf);
+}
+
+@import 'var';
+@import 'mixin';
+
+* {
+    margin: 0;
+  }
+  
+
+.container{
+    max-width: 1480px;
+    margin: 0 auto;
+}
+
+
+@import 'blocks/header';
+@import 'blocks/title';
+@import 'blocks/discounts';
+@import 'blocks/howwork';
+@import 'blocks/popular';
+@import 'blocks/restaurants';
+@import 'blocks/search';
+@import 'blocks/features';
+@import 'blocks/details';
+@import 'blocks/cta';
+@import 'blocks/footer';
+@import 'blocks/animations';

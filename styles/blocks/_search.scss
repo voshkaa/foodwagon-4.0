@@ -1,0 +1,250 @@
+.search{
+    padding: 82px 0 55px;
+    background: $bgcolor;
+    margin-left: 12px;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__header{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 89px;
+    }
+
+    &__title{
+        @include text(43px, 700, 112%, source_sans);
+        color: $gray900;
+    }
+
+    &__buttons{
+        margin-right: 20px;
+    }
+
+    &__button{
+        border: none;
+        background: none;
+        color: $primary;
+        @include text(18px, 700, 100%, source_sans);
+        margin-right: 16px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+
+         img{
+            padding-left: 10px;
+         }
+
+         &-left, &-right{
+            background: $primary;
+            border: #FAAA01;
+            padding: 20px 27px;
+            border-radius: 50%;
+            box-shadow: 0 6px 18px rgba(255, 179, 14, 0.4);
+            transition: all 0.3s ease;
+            cursor: pointer;
+
+            &:hover {
+                transform: translateY(-2px) scale(1.05);
+                box-shadow: 0 8px 24px rgba(255, 179, 14, 0.6);
+            }
+         }
+         &-left{
+            margin-right: 16px;
+         }
+
+         &:hover {
+            transform: translateX(3px);
+         }
+    }
+
+    &__grid{
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 34px;
+    }
+
+    &__card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        img{
+            border-radius: 50%;
+            margin-bottom: 27px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        p{
+            text-align: center;
+            @include text(22px, 700, 120%, source_sans);
+            color: $gray800;
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 1440px) {
+    .search {
+        padding: 82px 16px 55px;
+
+        &__grid {
+            gap: 24px;
+        }
+
+        &__card {
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: 1400px) {
+    .search {
+        &__grid {
+            grid-template-columns: repeat(5, 1fr);
+            gap: 24px;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .search {
+        &__grid {
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .search {
+        padding: 60px 16px 40px;
+
+        &__header {
+            margin-bottom: 60px;
+        }
+
+        &__title {
+            @include text(36px, 700, 112%, source_sans);
+        }
+
+        &__button {
+            @include text(16px, 700, 100%, source_sans);
+            margin-right: 16px;
+
+            &-left, &-right {
+                padding: 16px 22px;
+            }
+        }
+
+        &__grid {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        &__card {
+            img {
+                margin-bottom: 20px;
+            }
+
+            p {
+                @include text(20px, 700, 120%, source_sans);
+            }
+        }
+    }
+}
+
+@media (max-width: 786px) {
+    .search {
+        padding: 40px 12px 30px;
+
+        &__header {
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        &__title {
+            @include text(28px, 700, 112%, source_sans);
+        }
+
+        &__button {
+            @include text(14px, 700, 100%, source_sans);
+            margin-right: 12px;
+
+            &-left, &-right {
+                padding: 14px;
+
+                img{
+                    width: 50%;
+                }
+            }
+        }
+
+        &__grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+
+        &__card {
+            &:nth-child(n+5) {
+                display: none;
+            }
+
+            img {
+                margin-bottom: 16px;
+                width: 70%;
+            }
+
+            p {
+                @include text(18px, 700, 120%, source_sans);
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .search {
+        padding: 30px 12px;
+
+        &__header {
+            margin-bottom: 24px;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+        }
+
+        &__title {
+            @include text(24px, 700, 112%, source_sans);
+            text-align: center;
+        }
+
+        &__button {
+            @include text(12px, 700, 100%, source_sans);
+            margin-right: 8px;
+
+            &-left, &-right {
+                padding: 12px;
+            }
+        }
+
+        &__grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        &__card {
+            img {
+                margin-bottom: 12px;
+            }
+
+            p {
+                @include text(14px, 700, 120%, source_sans);
+            }
+        }
+    }
+}

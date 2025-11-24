@@ -1,0 +1,114 @@
+.cta{
+    padding: 95px 0 75px 12px;
+    background-image: url("../../img/bgfooter.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &__content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        h2{
+            @include text(57px, 900, 97.5%, source_sans);
+            color: $white;
+            width: 50%;
+            margin-bottom: 60px;
+        }
+
+        button{
+            background: $warning;
+            color: $white;
+            border-radius: 8px;
+            border: none;
+            padding: 21px 25px;
+            @include text(18px, 900, 100%, source_sans);
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            cursor: pointer;
+
+            img{
+                margin-left: 10px;
+            }
+
+            &:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 4px 12px rgba(241, 114, 40, 0.5);
+            }
+        }
+    }
+}
+
+@media (max-width: 1400px) {
+    .cta {
+        padding: 90px 16px 70px;
+
+        &__content {
+            h2 {
+                @include text(48px, 900, 97.5%, source_sans);
+                width: 60%;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .cta {
+        padding: 60px 0 50px;
+
+        &__content {
+            h2 {
+                @include text(40px, 900, 97.5%, source_sans);
+                width: 70%;
+                margin-bottom: 40px;
+            }
+
+            button {
+                padding: 18px 24px;
+                @include text(16px, 900, 100%, source_sans);
+            }
+        }
+    }
+}
+
+@media (max-width: 786px) {
+    .cta {
+        padding: 50px 0 40px;
+        background-image: linear-gradient(135deg, #FFB30E, #FF8A00);
+
+        &__content {
+            h2 {
+                @include text(32px, 900, 97.5%, source_sans);
+                width: 80%;
+                margin-bottom: 32px;
+            }
+
+            button {
+                padding: 16px 20px;
+                @include text(14px, 900, 100%, source_sans);
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .cta {
+        padding: 40px 12px;
+
+        &__content {
+            h2 {
+                @include text(24px, 900, 97.5%, source_sans);
+                width: 100%;
+                margin-bottom: 24px;
+            }
+
+            button {
+                padding: 14px 18px;
+                @include text(12px, 900, 100%, source_sans);
+            }
+        }
+    }
+}

@@ -1,0 +1,35 @@
+.discounts__card,
+.popular-items__card,
+.restaurants__card,
+.search__card,
+.features__card,
+.details__card {
+  transition: transform 0.3s ease;
+}
+.discounts__card:hover,
+.popular-items__card:hover,
+.restaurants__card:hover,
+.search__card:hover,
+.features__card:hover,
+.details__card:hover {
+  transform: translateY(-5px);
+}
+
+.header__logo img,
+.how-it-works__step-icon img {
+  transition: transform 0.3s ease;
+}
+.header__logo img:hover,
+.how-it-works__step-icon img:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.animate-on-scroll.animated {
+  opacity: 1;
+  transform: translateY(0);
+}

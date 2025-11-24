@@ -1,0 +1,241 @@
+.discounts{
+    padding-top: 82px;
+    margin-bottom: 80px;
+
+     &__grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+        margin-left: 10px;
+    }
+    &__card{
+        width: 100%;
+        
+        &-media {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            margin-bottom: 32px;
+            width: 100%;
+        }
+         &-img {
+            object-fit: cover;
+            display: block;
+            width: 100%;
+            height: auto;
+            margin-bottom: 2px;
+        }
+         &-badge {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            background: $primary;
+            color: $white;
+            border-radius: 0 32px 0 8px;
+            padding: 7px 20px;
+            display: inline-flex;
+            align-items: center;
+        
+            &-value {
+                @include text(68px, 700, 100%, source_sans);
+            }
+            &-perc {
+                @include text(35px, 700, 100%, source_sans);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            &-label {
+                @include text(22px, 400, 100%, source_sans);
+                margin-top: -6px;
+            }
+        }
+
+        &-title{
+            color: $gray800;
+            @include text(22px, 700, 120%, source_sans);
+            margin-bottom: 14px;
+        }
+
+        &-caption{
+            background: $warning-20;
+            border-radius: 8px;
+            padding: 8px 16px;
+            color: $warning;
+            @include text(22px, 700, 120%, source_sans);
+            width: fit-content;
+        }
+    }
+}
+
+@media (max-width: 1440px) {
+    .discounts {
+        padding-left: 16px;
+        padding-right: 16px;
+
+        &__grid {
+            gap: 12px;
+            margin-left: 0;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .discounts {
+        padding-left: 16px;
+        padding-right: 16px;
+
+        &__grid {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+            justify-items: center;
+        }
+
+        &__card {
+            &-media {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .discounts {
+        padding: 60px 16px 0 16px;
+        margin-bottom: 60px;
+
+        &__grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+
+        &__card {
+            &-badge {
+                padding: 6px 18px;
+
+                &-value {
+                    @include text(56px, 700, 100%, source_sans);
+                }
+
+                &-perc {
+                    @include text(28px, 700, 100%, source_sans);
+                }
+
+                &-label {
+                    @include text(18px, 400, 100%, source_sans);
+                }
+            }
+
+            &-title {
+                @include text(20px, 700, 120%, source_sans);
+                margin-bottom: 12px;
+            }
+
+            &-caption {
+                @include text(20px, 700, 120%, source_sans);
+                padding: 6px 14px;
+            }
+        }
+    }
+}
+
+@media (max-width: 786px) {
+    .discounts {
+        padding: 40px 12px 0 12px;
+        margin-bottom: 40px;
+
+        &__grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        &__card {
+            &-media {
+                margin-bottom: 24px;
+            }
+
+            &-badge {
+                padding: 5px 16px;
+
+                &-value {
+                    @include text(48px, 700, 100%, source_sans);
+                }
+
+                &-perc {
+                    @include text(24px, 700, 100%, source_sans);
+                }
+
+                &-label {
+                    @include text(16px, 400, 100%, source_sans);
+                }
+            }
+
+            &-title {
+                @include text(18px, 700, 120%, source_sans);
+                margin-bottom: 10px;
+            }
+
+            &-caption {
+                @include text(18px, 700, 120%, source_sans);
+                padding: 6px 12px;
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .discounts {
+        padding: 30px 12px 0 12px;
+        margin-bottom: 30px;
+
+        &__grid {
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
+
+        &__card {
+            &-content {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            &-media {
+                margin-bottom: 20px;
+                max-height: 200px;
+            }
+
+            &-img {
+                max-height: 200px;
+                object-fit: cover;
+            }
+
+            &-badge {
+                padding: 6px 18px;
+
+                &-value {
+                    @include text(40px, 700, 100%, source_sans);
+                }
+
+                &-perc {
+                    @include text(20px, 700, 100%, source_sans);
+                }
+
+                &-label {
+                    @include text(14px, 400, 100%, source_sans);
+                }
+            }
+
+            &-title {
+                @include text(16px, 700, 120%, source_sans);
+                margin-bottom: 0;
+            }
+
+            &-caption {
+                @include text(16px, 700, 120%, source_sans);
+                padding: 5px 10px;
+            }
+        }
+    }
+}

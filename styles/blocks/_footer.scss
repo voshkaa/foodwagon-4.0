@@ -1,0 +1,560 @@
+.footer{
+    background: $gray900;
+    padding: 99px 0 69px 12px;
+    color: $gray100;
+
+    &__cities{
+        margin-bottom: 101px;
+
+        h4{
+            @include text(22px, 700, 120%, source_sans);
+            margin-bottom: 40px;
+            color: $white;
+        }
+    }
+
+    &__city{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 234px;
+
+        &-column{
+            display: flex;
+            flex-direction: column;
+        }
+
+        &-link{
+            text-decoration: none;
+            color: $gray100;
+            @include text(18px, 400, 100%, source_sans);
+            margin-bottom: 16px;
+            transition: color 0.3s ease;
+            white-space: nowrap;
+
+            &:hover {
+                color: $white;
+            }
+        }
+    }
+
+    &__line{
+        height: 1px;
+        background: $gray800;
+        width: 100%;
+    }
+
+    &__company{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 63px;
+        margin-bottom: 55px;
+
+        &-grid{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 50px;
+        }
+    }
+
+    &__title{
+        @include text(22px, 700, 120%, source_sans);
+        margin-bottom: 40px;
+    }
+
+    &__list{
+        list-style: none;
+        padding: 0;
+
+        li{
+            margin-bottom: 16px;
+        }
+    }
+
+    &__link{
+        text-decoration: none;
+        color: $white;
+        @include text(18px, 400, 100%, source_sans);
+    }
+
+    &__follow{
+        &-title{
+            @include text(18px, 700, 120%, source_sans);
+            color: rgba($color: #f5f5f5, $alpha: 0.5);
+            margin-bottom: 38px;
+            text-transform: uppercase;
+            margin-left: 7px;
+        }
+    }
+
+    &__social{
+        margin-bottom: 40px;
+        margin-left: 7px;
+
+        a{
+            margin-right: 14px;
+            opacity: 0.31;
+        }
+    }
+
+    &__subscribe{
+        &-text{
+            @include text(18px, 700, 140%, open_sans);
+            margin-bottom: 40px;
+            color: #bbbbbb;
+            margin-left: 7px;
+        }
+    }
+
+    &__input{
+        background-image: url("../../img/envelope.png");
+        background-repeat: no-repeat;
+        background-position: 16px center;
+        background-color: rgba($color: #adadad, $alpha: 0.2);
+        border-radius: 8px;
+        border: none;
+        @include text(18px, 400, 140%, open_sans);
+        padding: 18px 75px 18px 46px;
+        margin-right: 16px;
+    }
+
+    &__button{
+        border: none;
+        border-radius: 8px;
+        background: linear-gradient(45deg, #FFAE00, #FF8A00);
+        padding: 21px 27px;
+        @include text(18px, 700, 100%, source_sans);
+        color: $white;
+        box-shadow: 0 2px 18px $primary;
+        transition: all 0.3s ease;
+        cursor: pointer;
+
+        &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 24px rgba(255, 154, 14, 0.6);
+        }
+    }
+
+    &__bottom{
+        margin-top: 16px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__copyright{
+        @include text(15px, 400, 120%, open_sans);
+
+        &-icon{
+            margin: 0 10px;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        &-year{
+            font-weight: 700;
+        }
+    }
+
+    &__credits{
+        @include text(15px, 400, 120%, open_sans);
+
+        span{
+            color: $primary;
+        }
+        b{
+            margin-left: 8px;
+        }
+    }
+}
+
+@media (max-width: 1480px) {
+    .footer {
+        padding-left: 16px;
+        padding-right: 16px;
+
+        &__city {
+            gap: 80px;
+        }
+    }
+}
+
+@media (max-width: 1400px) {
+    .footer {
+        &__city {
+            gap: 60px;
+        }
+
+        &__company {
+            &-grid {
+                gap: 40px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .footer {
+        &__city {
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+
+            &-column {
+                &:nth-child(5) {
+                    display: none;
+                }
+            }
+        }
+
+        &__company {
+            flex-direction: column;
+            align-items: center;
+
+            &-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
+                width: 100%;
+                margin-bottom: 40px;
+            }
+        }
+
+        &__subscribe {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__follow {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &-title {
+                text-align: center;
+            }
+        }
+
+        &__social {
+            display: flex;
+            justify-content: center;
+        }
+
+        &__subscribe-text {
+            text-align: center;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .footer {
+        padding: 60px 16px 50px 16px;
+
+        &__cities {
+            margin-bottom: 60px;
+
+            h4 {
+                @include text(20px, 700, 120%, source_sans);
+                margin-bottom: 30px;
+            }
+        }
+
+        &__city {
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+
+            &-column {
+                &:nth-child(5) {
+                    display: none;
+                }
+            }
+
+            &-link {
+                @include text(16px, 400, 100%, source_sans);
+                margin-bottom: 12px;
+            }
+        }
+
+        &__company {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 40px;
+            margin-bottom: 40px;
+
+            &-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 30px;
+            }
+        }
+
+        &__title {
+            @include text(20px, 700, 120%, source_sans);
+            margin-bottom: 30px;
+        }
+
+        &__link {
+            @include text(16px, 400, 100%, source_sans);
+        }
+
+        &__follow {
+            margin-top: 30px;
+
+            &-title {
+                @include text(16px, 700, 120%, source_sans);
+                margin-bottom: 30px;
+            }
+        }
+
+        &__subscribe {
+            &-text {
+                @include text(16px, 700, 140%, open_sans);
+                margin-bottom: 30px;
+            }
+        }
+
+        &__subscribe {
+            &-form {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+            }
+        }
+
+        &__input {
+            @include text(16px, 400, 140%, open_sans);
+            padding: 16px 60px 16px 45px;
+            margin-right: 0;
+            flex: 1;
+        }
+
+        &__button {
+            padding: 16px 24px;
+            @include text(16px, 700, 100%, source_sans);
+            white-space: nowrap;
+        }
+
+        &__bottom {
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 16px;
+        }
+
+        &__copyright {
+            @include text(14px, 400, 120%, open_sans);
+        }
+
+        &__credits {
+            @include text(14px, 400, 120%, open_sans);
+        }
+    }
+}
+
+@media (max-width: 786px) {
+    .footer {
+        padding: 50px 16px 40px 16px;
+
+        &__cities {
+            margin-bottom: 50px;
+
+            h4 {
+                @include text(18px, 700, 120%, source_sans);
+                margin-bottom: 24px;
+            }
+        }
+
+        &__city {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+
+            &-column {
+                &:nth-child(4) {
+                    display: none;
+                }
+            }
+
+            &-link {
+                @include text(14px, 400, 100%, source_sans);
+                margin-bottom: 10px;
+            }
+        }
+
+        &__company {
+            margin-top: 30px;
+            margin-bottom: 30px;
+
+            &-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 30px;
+            }
+        }
+
+        &__title {
+            @include text(18px, 700, 120%, source_sans);
+            margin-bottom: 24px;
+        }
+
+        &__link {
+            @include text(14px, 400, 100%, source_sans);
+        }
+
+        &__follow {
+            margin-top: 24px;
+
+            &-title {
+                @include text(14px, 700, 120%, source_sans);
+                margin-bottom: 24px;
+            }
+        }
+
+        &__social {
+            margin-bottom: 30px;
+
+            a {
+                margin-right: 12px;
+            }
+        }
+
+        &__subscribe {
+            &-text {
+                @include text(14px, 700, 140%, open_sans);
+                margin-bottom: 24px;
+            }
+
+            &-form {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+            }
+        }
+
+        &__input {
+            @include text(14px, 400, 140%, open_sans);
+            padding: 14px 50px 14px 45px;
+            margin-right: 0;
+            flex: 1;
+        }
+
+        &__button {
+            padding: 14px 20px;
+            @include text(14px, 700, 100%, source_sans);
+            white-space: nowrap;
+        }
+
+        &__copyright {
+            @include text(12px, 400, 120%, open_sans);
+        }
+
+        &__credits {
+            @include text(12px, 400, 120%, open_sans);
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .footer {
+        padding: 40px 12px;
+
+        &__cities {
+            margin-bottom: 40px;
+
+            h4 {
+                @include text(16px, 700, 120%, source_sans);
+                margin-bottom: 20px;
+            }
+        }
+
+        &__city {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+
+            &-column {
+                &:nth-child(3) {
+                    display: none;
+                }
+            }
+
+            &-link {
+                @include text(12px, 400, 100%, source_sans);
+                margin-bottom: 8px;
+            }
+        }
+
+        &__company {
+            margin-top: 20px;
+            margin-bottom: 15px;
+
+            &-grid {
+                gap: 16px;
+                row-gap: 16px;
+            }
+        }
+
+        &__title {
+            @include text(16px, 700, 120%, source_sans);
+            margin-bottom: 20px;
+        }
+
+        &__link {
+            @include text(12px, 400, 100%, source_sans);
+        }
+
+        &__follow {
+            margin-top: 20px;
+
+            &-title {
+                @include text(12px, 700, 120%, source_sans);
+                margin-bottom: 20px;
+            }
+        }
+
+        &__social {
+            margin-bottom: 24px;
+
+            a {
+                margin-right: 10px;
+            }
+        }
+
+        &__subscribe {
+            margin-top: 10px;
+
+            &-text {
+                @include text(12px, 700, 140%, open_sans);
+                margin-bottom: 15px;
+            }
+
+            &-form {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+            }
+        }
+
+        &__input {
+            @include text(12px, 400, 140%, open_sans);
+            padding: 12px 40px 12px 50px;
+            margin-right: 0;
+            flex: 1;
+        }
+
+        &__button {
+            padding: 12px 18px;
+            @include text(12px, 700, 100%, source_sans);
+            white-space: nowrap;
+        }
+
+        &__bottom {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 12px;
+        }
+
+        &__copyright {
+            @include text(11px, 400, 120%, open_sans);
+        }
+
+        &__credits {
+            @include text(11px, 400, 120%, open_sans);
+        }
+    }
+}

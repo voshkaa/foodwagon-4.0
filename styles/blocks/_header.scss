@@ -1,0 +1,213 @@
+.header {
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 0;
+    }
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        padding-left: 8px;
+        margin-right: 10px;
+
+        img {
+            padding-right: 10px;
+        }
+    }
+
+    &__logo-text {
+        color: $warning;
+        @include text(31px, 700, 120%, source_sans);
+        letter-spacing: -2.5%;
+
+        &-highlight {
+            color: $primary; 
+        }
+         &-g {
+            font-size: 0.8em;
+            vertical-align: baseline;
+        }
+    }
+
+    &__location {
+        display: flex;
+        align-items: center;
+    }
+
+    &__location-label {
+        @include text(18px, 700, 100%, source_sans); 
+        color: $gray800;
+        margin-right: 12px;
+    }
+
+    &__location img {
+        padding-right: 10px;
+    }
+
+    &__location-text {
+        @include text(18px, 400, 140%, open_sans); 
+        color: $gray800;
+    }
+
+    &__location-address {
+        font-weight: 700; 
+    }
+
+    &__actions {
+        display: flex;
+        align-items: center;
+        margin-right: -8px;
+    }
+
+    &__search {
+        display: flex;
+        align-items: center;
+
+        img {
+            margin-right: 8px;
+        }
+    }
+
+    &__search-text {
+        @include text(18px, 700, 100%, source_sans); 
+        color: $gray800;
+        margin-right: 28px;
+    }
+
+    &__login {
+        display: flex;
+        align-items: center;
+        border: none;
+        border-radius: 8px;
+        box-shadow: 0 6px 18px rgba(255, 138, 0, 0.3);
+        padding: 14px 24px;
+        background: $white;
+        @include text(18px, 700, 100%, source_sans); 
+        color: $ybutton;
+        transition: all 0.3s ease;
+        cursor: pointer;
+
+        img {
+            padding: 0 5px 0 3px;
+            margin-right: 5px;
+        }
+
+        &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(255, 138, 0, 0.4);
+        }
+    }
+}
+
+@media (max-width: 1480px) {
+    .header {
+        padding: 8px 16px;
+
+        &__nav {
+            padding: 15px 0;
+        }
+
+        &__search-text {
+            margin-right: 16px;
+        }
+
+        &__actions {
+            margin-right: 0;
+        }
+
+        &__login {
+            padding: 14px 18px;
+            @include text(16px, 700, 100%, source_sans);
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .header {
+        &__nav {
+            flex-wrap: nowrap;
+            gap: 12px;
+        }
+
+        &__location-text {
+            @include text(12px, 400, 140%, open_sans);
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .header {
+        &__nav {
+            flex-wrap: nowrap;
+            gap: 16px;
+        }
+
+        &__search-text {
+            display: none;
+        }
+
+        &__logo-text {
+            @include text(28px, 700, 120%, source_sans);
+        }
+    }
+}
+
+@media (max-width: 786px) {
+    .header {
+        &__location {
+            display: none;
+        }
+
+        &__logo-text {
+            @include text(24px, 700, 120%, source_sans);
+        }
+
+        &__login {
+            padding: 10px 16px;
+            @include text(16px, 700, 100%, source_sans);
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .header {
+        &__nav {
+            padding: 10px 0;
+            flex-wrap: nowrap;
+        }
+
+        &__logo {
+            img {
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        &__logo-text {
+            @include text(20px, 700, 120%, source_sans);
+        }
+
+        &__actions {
+            justify-content: flex-end;
+        }
+
+        &__search {
+            img {
+                display: none;
+            }
+        }
+
+        &__login {
+            padding: 8px 12px;
+            @include text(14px, 700, 100%, source_sans);
+
+            img {
+                width: 16px;
+                height: 16px;
+            }
+        }
+    }
+}
+

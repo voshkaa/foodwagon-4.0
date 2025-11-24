@@ -1,0 +1,309 @@
+.title {
+    background-image: url("../../img/bgtitle.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 136px 0 1px 18px;
+
+    &__card {
+        margin-bottom: 128px;
+    }
+
+    &__content {
+        margin-bottom: 32px;
+    }
+
+    &__heading {
+        color: $white;
+        @include text(88px, 700, 100%, source_sans);
+        margin-bottom: 12px;
+    }
+
+    &__description {
+        color: #504f4f;
+        @include text(22px, 400, 120%, source_sans);
+    }
+
+    &__form {
+        background: $white;
+        width: fit-content;
+        border-radius: 16px;
+    }
+
+    &__choice {
+        display: flex;
+        gap: 8px;
+        margin-bottom: 24px;
+        padding: 22px 24px 0 24px;
+    }
+
+    &__option {
+        display: flex;
+        align-items: center;
+        padding: 10px 24px;
+        border-radius: 8px;
+
+        img {
+            padding-right: 10px;
+        }
+
+        &-text {
+            @include text(18px, 700, 100%, source_sans);
+            color: $gray600;
+        }
+
+        &--active {
+            background: rgba(241, 114, 40, 0.1);
+
+            .title__option-text {
+                color: $warning;
+            }
+        }
+    }
+
+    &__line {
+        color: $gray200;
+        margin-bottom: 24px;
+        width: 100%;
+        border: none;
+        border-top: 1px solid $gray200;
+    }
+
+    &__search {
+        display: flex;
+        padding: 0 24px 22px 24px;
+    }
+
+    &__input {
+        background: $gray100;
+        width: 554px;
+        border: none;
+        padding: 12px 0 12px 40px;
+        border-radius: 8px;
+        margin-right: 16px;
+        background-image: url("../../img/Icon2.png");
+        background-repeat: no-repeat;
+        background-position: 12px center;
+        @include text(18px, 400, 140%, open_sans);
+    }
+
+    &__button {
+        border-radius: 8px;
+        background: $warning;
+        padding: 21px 48px;
+        border: none;
+        color: $white;
+        @include text(18px, 700, 100%, source_sans);
+        align-items: center;
+        transition: all 0.3s ease;
+        cursor: pointer;
+
+        img {
+            margin-right: 10px;
+        }
+
+        &:hover {
+            background: darken($warning, 10%);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(241, 114, 40, 0.5);
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .title {
+        padding: 100px 0 1px 18px;
+
+        &__heading {
+            @include text(72px, 700, 100%, source_sans);
+        }
+
+        &__description {
+            @include text(20px, 400, 120%, source_sans);
+        }
+
+        &__input {
+            width: 450px;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .title {
+        padding: 80px 0 1px 18px;
+
+        &__card {
+            margin-bottom: 80px;
+        }
+
+        &__heading {
+            @include text(56px, 700, 100%, source_sans);
+        }
+
+        &__description {
+            @include text(18px, 400, 120%, source_sans);
+        }
+
+        &__form {
+            width: 100%;
+            max-width: 600px;
+        }
+
+        &__input {
+            width: 100%;
+            max-width: 400px;
+            @include text(16px, 400, 140%, open_sans);
+        }
+
+        &__button {
+            padding: 18px 24px;
+            @include text(16px, 700, 100%, source_sans);
+            white-space: nowrap;
+        }
+    }
+}
+
+@media (max-width: 786px) {
+    .title {
+        background-image: none;
+        background: linear-gradient(135deg, #FFE082 0%, $primary 100%);
+        padding: 60px 16px 1px 16px;
+        text-align: center;
+
+        &__card {
+            margin-bottom: 60px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__heading {
+            @include text(42px, 700, 100%, source_sans);
+            margin-bottom: 10px;
+        }
+
+        &__description {
+            @include text(16px, 400, 120%, source_sans);
+        }
+
+        &__form {
+            width: 100%;
+            max-width: 500px;
+            box-sizing: border-box;
+        }
+
+        &__choice {
+            padding: 18px 20px 0 20px;
+            gap: 6px;
+            justify-content: center;
+        }
+
+        &__option {
+            padding: 8px 16px;
+
+            &-text {
+                @include text(16px, 700, 100%, source_sans);
+            }
+        }
+
+        &__search {
+            flex-direction: column;
+            gap: 12px;
+            padding: 0 20px 18px 20px;
+        }
+
+        &__input {
+            width: 100%;
+            margin-right: 0;
+            box-sizing: border-box;
+            max-width: none;
+        }
+
+        &__button {
+            width: 100%;
+            padding: 16px 32px;
+            @include text(16px, 700, 100%, source_sans);
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .title {
+        background-image: none;
+        background: linear-gradient(135deg, #FFE082 0%, $primary 100%);
+        padding: 40px 12px 1px 12px;
+        text-align: center;
+
+        &__card {
+            margin-bottom: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__heading {
+            @include text(32px, 700, 100%, source_sans);
+            margin-bottom: 8px;
+        }
+
+        &__description {
+            @include text(14px, 400, 120%, source_sans);
+        }
+
+        &__choice {
+            padding: 16px 16px 0 16px;
+            gap: 4px;
+            margin-bottom: 20px;
+            justify-content: center;
+        }
+
+        &__option {
+            padding: 6px 12px;
+            flex: 1;
+
+            img {
+                width: 16px;
+                height: 16px;
+                padding-right: 6px;
+            }
+
+            &-text {
+                @include text(14px, 700, 100%, source_sans);
+            }
+        }
+
+        &__search {
+            padding: 0 16px 16px 16px;
+        }
+
+        &__input {
+            padding: 10px 0 10px 36px;
+            background-position: 10px center;
+            @include text(12px, 400, 140%, open_sans);
+        }
+
+        &__button {
+            padding: 14px 24px;
+            @include text(14px, 700, 100%, source_sans);
+
+            img {
+                width: 16px;
+                height: 16px;
+                margin-right: 8px;
+            }
+        }
+    }
+}
+    

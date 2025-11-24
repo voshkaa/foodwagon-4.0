@@ -1,0 +1,426 @@
+.restaurants{
+    padding: 29px 0 80px;
+    margin-left: 13px;
+
+    &__title{
+        @include text(44px, 700, 110%, source_sans);
+        color: $gray900;
+        margin-bottom: 86px;
+        text-align: center;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+        gap: 16px;
+        row-gap: 64px;
+        margin-bottom: 88px;
+        justify-items: center;
+    }
+
+    &__card{
+        position: relative;
+        overflow: hidden;
+
+        &-media{
+            margin-bottom: 23px;
+
+           img{
+            border-radius: 16px;
+            object-fit: cover;
+            display: block;
+            width: 100%;
+           }
+        }
+
+        &-badge {
+            position: absolute;
+            left: 24px;
+            top: 24px;
+            color: $white;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        &-sale{
+            display: flex;
+            background: $warning;
+            padding: 8px 16px;
+            border-radius: 8px;
+            margin-right: 8px;
+            @include text(22px, 700, 120%, source_sans);
+
+            img{
+                width: 18px;
+                height: 18px;
+                margin-right: 10px;
+            }
+        }
+
+        &-speed{
+            display: flex;
+            background: $primary;
+            padding: 8px 16px;
+            @include text(22px, 700, 120%, source_sans);
+            border-radius: 8px;
+
+            img{
+               margin-right: 10px; 
+               padding: 2px 0 2px 2px;
+            }
+        }
+
+        &-restname{
+            display: flex;
+            align-items: center;
+            margin-bottom: 32px;
+
+            img{
+                margin-right: 24px;
+            }
+        }
+
+        &-name{
+            @include text(22px, 700, 120%, source_sans);
+            color: $gray800;
+            margin-bottom: 4px;
+        }
+
+        &-rating{
+            display: flex;
+            align-items: center;
+
+            img{
+                margin-right: 10px;
+            }
+            p{
+                color: $primary;
+                font-weight: 400;
+                padding-top: 5px;
+            }
+        }
+
+        &-opentime{
+            background: $warning-20;
+            border-radius: 16px;
+            padding: 8px 16px;
+            @include text(22px, 700, 120%, source_sans);
+            color: $warning;
+            width: fit-content;
+
+            &--active{
+                background: $active-20;
+                color: $active;
+            }
+        }
+    }
+
+    &__button{
+        background: $primary;
+        border-radius: 14px;
+        padding: 21px 48px;
+        color: $white;
+        @include text(18px, 700, 100%, source_sans);
+        margin: 0 auto;
+        display: block;
+        border: none;
+        box-shadow: 0 6px 18px rgba(255, 154, 14, 0.4);
+        transition: all 0.3s ease;
+        cursor: pointer;
+
+        img{
+            padding-left: 10px;
+        }
+
+        &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(255, 154, 14, 0.6);
+        }
+    }
+}
+
+@media (max-width: 1400px) {
+    .restaurants {
+        padding: 25px 16px 75px ;
+
+        &__grid {
+            grid-template-columns: repeat(3, 1fr);
+            row-gap: 48px;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .restaurants {
+        &__grid {
+            grid-template-columns: repeat(2, 1fr);
+            row-gap: 40px;
+        }
+
+        &__card {
+            &:nth-child(n+7) {
+                display: none;
+            }
+            &-badge {
+                left: 16px;
+                top: 16px;
+            }
+
+            &-sale {
+                padding: 6px 12px;
+                @include text(18px, 700, 120%, source_sans);
+            }
+
+            &-speed {
+                padding: 6px 12px;
+                @include text(18px, 700, 120%, source_sans);
+            }
+
+            &-name {
+                @include text(20px, 700, 120%, source_sans);
+            }
+
+            &-opentime {
+                @include text(18px, 700, 120%, source_sans);
+                padding: 6px 12px;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .restaurants {
+        padding: 20px 16px 60px;
+
+        &__title {
+            @include text(36px, 700, 110%, source_sans);
+            margin-bottom: 60px;
+        }
+
+        &__grid {
+            row-gap: 32px;
+            margin-bottom: 60px;
+        }
+
+        &__card {
+            &-media {
+                margin-bottom: 20px;
+            }
+
+            &-badge {
+                left: 12px;
+                top: 12px;
+            }
+
+            &-sale {
+                padding: 5px 10px;
+                @include text(16px, 700, 120%, source_sans);
+            }
+
+            &-speed {
+                padding: 5px 10px;
+                @include text(16px, 700, 120%, source_sans);
+            }
+
+            &-restname {
+                margin-bottom: 24px;
+
+                img {
+                    margin-right: 16px;
+                }
+            }
+
+            &-name {
+                @include text(18px, 700, 120%, source_sans);
+            }
+
+            &-opentime {
+                @include text(16px, 700, 120%, source_sans);
+                padding: 6px 12px;
+            }
+        }
+
+        &__button {
+            padding: 18px 40px;
+            @include text(16px, 700, 100%, source_sans);
+        }
+    }
+}
+
+@media (max-width: 786px) {
+    .restaurants {
+        padding: 20px 12px 40px;
+
+        &__title {
+            @include text(28px, 700, 110%, source_sans);
+            margin-bottom: 40px;
+        }
+
+        &__grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            row-gap: 24px;
+            margin-bottom: 40px;
+        }
+
+        &__card {
+            width: 100%;
+
+            &-media {
+                margin-bottom: 16px;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            &-badge {
+                left: 10px;
+                top: 10px;
+            }
+
+            &-sale {
+                padding: 4px 8px;
+                @include text(14px, 700, 120%, source_sans);
+                margin-right: 6px;
+
+                img {
+                    width: 14px;
+                    height: 14px;
+                    margin-right: 6px;
+                }
+            }
+
+            &-speed {
+                padding: 4px 8px;
+                @include text(14px, 700, 120%, source_sans);
+            }
+
+            &-restname {
+                margin-bottom: 16px;
+
+                img {
+                    margin-right: 12px;
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+
+            &-rating {
+                img {
+                    width: 14px;
+                    height: 14px;
+                    margin-right: 6px;
+                }
+            }
+
+            &-name {
+                @include text(16px, 700, 120%, source_sans);
+            }
+
+            &-opentime {
+                @include text(14px, 700, 120%, source_sans);
+                padding: 5px 10px;
+            }
+        }
+
+        &__button {
+            padding: 16px 32px;
+            @include text(14px, 700, 100%, source_sans);
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .restaurants {
+        padding: 20px 12px 30px 12px;
+
+        &__title {
+            @include text(24px, 700, 110%, source_sans);
+            margin-bottom: 24px;
+        }
+
+        &__grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+            row-gap: 24px;
+            margin-bottom: 30px;
+        }
+
+        &__card {
+            &:nth-child(n+5) {
+                display: none;
+            }
+            &-media {
+                margin-bottom: 12px;
+
+                img {
+                    height: 120px;
+                    object-fit: cover;
+                }
+            }
+
+            &-badge {
+                left: 8px;
+                top: 8px;
+            }
+
+            &-sale {
+                padding: 4px 8px;
+                @include text(12px, 700, 120%, source_sans);
+                margin-right: 4px;
+
+                img {
+                    width: 12px;
+                    height: 12px;
+                    margin-right: 6px;
+                }
+            }
+
+            &-speed {
+                padding: 4px 8px;
+                @include text(12px, 700, 120%, source_sans);
+
+                img {
+                    width: 12px;
+                    height: 12px;
+                    margin-right: 6px;
+                    padding: 0;
+                }
+            }
+
+            &-restname {
+                margin-bottom: 12px;
+
+                img {
+                    margin-right: 10px;
+                    width: 36px;
+                    height: 36px;
+                }
+            }
+
+            &-rating {
+                img {
+                    width: 12px;
+                    height: 12px;
+                    margin-right: 6px;
+                }
+            }
+
+            &-name {
+                @include text(14px, 700, 120%, source_sans);
+            }
+
+            &-opentime {
+                @include text(12px, 700, 120%, source_sans);
+                padding: 4px 8px;
+            }
+        }
+
+        &__button {
+            padding: 14px 24px;
+            @include text(14px, 700, 100%, source_sans);
+            width: 100%;
+        }
+    }
+}

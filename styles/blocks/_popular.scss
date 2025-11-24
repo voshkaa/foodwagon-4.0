@@ -1,0 +1,243 @@
+.popular-items {
+    padding: 80px 0 40px;
+    margin-left: 12px;
+
+    &__title {
+        @include text(43px, 700, 112%, source_sans);
+        color: $gray900;
+        margin-bottom: 88px;
+        text-align: center;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 16px;
+    }
+
+    &__card {
+        &-img {
+            border-radius: 16px;
+            width: 100%;
+            height: 283px;
+        }
+
+        &-content {
+            padding: 12px 0;
+        }
+
+        &-title {
+            @include text(22px, 700, 120%, source_sans);
+            color: $gray800;
+            margin-bottom: 8px;
+        }
+
+        &-addres{
+            color: $primary;
+            @include text(22px, 400, 120%, source_sans);
+            margin-bottom: 6px;
+        }
+
+        &-addresmarker {
+            margin-right: 6px;
+        }
+
+        &-price {
+            @include text(22px, 700, 120%, source_sans);
+            color: $gray900;
+            margin-bottom: 16px;
+        }
+
+        &-button {
+            background: $warning;
+            color: $white;
+            border: none;
+            border-radius: 8px;
+            padding: 21px 98px;
+            @include text(18px, 700, 100%, source_sans);
+            box-shadow: 0 6px 18px rgba(241, 114, 40, 0.4);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            white-space: nowrap;
+
+            &:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 8px 24px rgba(241, 114, 40, 0.6);
+            }
+        }
+    }
+}
+
+@media (max-width: 1440px) {
+    .popular-items {
+        &__card {
+            &-button {
+                padding: 21px 60px;
+                white-space: nowrap;
+            }
+        }
+    }
+}
+
+@media (max-width: 1400px) {
+    .popular-items {
+        padding: 75px 16px 35px;
+
+        &__grid {
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .popular-items {
+        &__grid {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        &__card {
+            &-img {
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .popular-items {
+        padding: 60px 16px 30px;
+
+        &__title {
+            @include text(36px, 700, 112%, source_sans);
+            margin-bottom: 60px;
+        }
+
+        &__grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        &__card {
+            &:nth-child(5) {
+                display: none;
+            }
+
+            &-img {
+                height: 240px;
+            }
+
+            &-title {
+                @include text(20px, 700, 120%, source_sans);
+            }
+
+            &-addres {
+                @include text(20px, 400, 120%, source_sans);
+            }
+
+            &-price {
+                @include text(20px, 700, 120%, source_sans);
+            }
+
+            &-button {
+                padding: 18px 60px;
+                @include text(16px, 700, 100%, source_sans);
+            }
+        }
+    }
+}
+
+@media (max-width: 786px) {
+    .popular-items {
+        padding: 40px 16px 20px;
+
+        &__title {
+            @include text(28px, 700, 112%, source_sans);
+            margin-bottom: 40px;
+        }
+
+        &__grid {
+            gap: 16px;
+        }
+
+        &__card {
+            &-img {
+                height: 200px;
+            }
+
+            &-content {
+                padding: 10px 0;
+            }
+
+            &-title {
+                @include text(18px, 700, 120%, source_sans);
+            }
+
+            &-addres {
+                @include text(18px, 400, 120%, source_sans);
+            }
+
+            &-price {
+                @include text(18px, 700, 120%, source_sans);
+            }
+
+            &-button {
+                padding: 16px 40px;
+                @include text(14px, 700, 100%, source_sans);
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .popular-items {
+        padding: 30px 12px;
+
+        &__title {
+            @include text(24px, 700, 112%, source_sans);
+            margin-bottom: 24px;
+        }
+
+        &__grid {
+            grid-template-columns: 1fr;
+            gap: 12px;
+        }
+
+        &__card {
+            display: flex;
+            flex-direction: row;
+            gap: 12px;
+            align-items: flex-start;
+
+            &-img {
+                width: 100px;
+                height: 100px;
+            }
+
+            &-content {
+                padding: 0;
+            }
+
+            &-title {
+                @include text(14px, 700, 120%, source_sans);
+                margin-bottom: 4px;
+            }
+
+            &-addres {
+                @include text(12px, 400, 120%, source_sans);
+                margin-bottom: 4px;
+            }
+
+            &-price {
+                @include text(12px, 700, 120%, source_sans);
+                margin-bottom: 8px;
+            }
+
+            &-button {
+                padding: 8px 12px;
+                @include text(12px, 700, 100%, source_sans);
+            }
+        }
+    }
+}

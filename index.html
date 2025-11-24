@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/dist/style.css">
+    <title>FoodWagon</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__nav">
+                <div class="header__logo animate__animated animate__fadeInLeft">
+                    <img src="img/logo.png" alt="Logo">
+                    <p class="header__logo-text">food<span class="header__logo-text-highlight">wa<span class="header__logo-text-g">G</span>on</span></p>
+                </div>
+                <div class="header__location animate__animated animate__fadeIn animate__delay-1s">
+                    <p class="header__location-label">Deliver to:</p>
+                    <img src="img/map-marker.png" alt="Location marker">
+                    <p class="header__location-text">Current Location <span class="header__location-address">Mohammadpur Bus Stand, Dhaka</span></p>
+                </div>
+                <div class="header__actions">
+                    <div class="header__search animate__animated animate__fadeInRight animate__delay-2s">
+                        <img src="img/Search.png" alt="Search">
+                        <p class="header__search-text">Search Food</p>
+                    </div>
+                    <button class="header__login animate__animated animate__fadeInRight animate__delay-2s">
+                        <img src="img/user.png" alt="User"> Login
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="title">
+        <div class="container">
+            <div class="title__card">
+                <div class="title__content animate__animated animate__fadeInUp">
+                    <h1 class="title__heading">Are you starving?</h1>
+                    <p class="title__description">Within a few clicks, find meals that are accessible near you</p>
+                </div>
+                <div class="title__form animate__animated animate__fadeInUp animate__delay-1s">
+                    <div class="title__choice">
+                        <div class="title__option title__option--active">
+                            <img src="img/Icon.png" alt="Delivery">
+                            <p class="title__option-text">Delivery</p>
+                        </div>
+                        <div class="title__option">
+                            <img src="img/Icon1.png" alt="Pickup">
+                            <p class="title__option-text">Pickup</p>
+                        </div>
+                    </div>
+                    <hr class="title__line">
+                    <form class="title__search">
+                        <input type="email" class="title__input" placeholder="Enter Your Address">
+                        <button type="submit" class="title__button animate__animated animate__infinite animate__slow">
+                            <img src="img/Icon3.png" alt="Search"> Find Food
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="discounts">
+        <div class="container">
+           <div class="discounts__grid">
+                <div class="discounts__card animate__animated animate__fadeInUp animate__delay-1s">
+                    <div class="discounts__card-media">
+                        <img class="discounts__card-img" src="img/Image.png" alt="Greys Vage">
+                        <div class="discounts__card-badge">
+                            <span class="discounts__card-badge-value">15</span>
+                            <div class="discounts__card-badge-sale">
+                                <span class="discounts__card-badge-perc">%</span>
+                                <span class="discounts__card-badge-label">Off</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="discounts__card-content">
+                        <div class="discounts__card-title">Greys Vage</div>
+                        <div class="discounts__card-caption">6 Days Remaining</div>
+                    </div>
+                </div>
+                <div class="discounts__card animate__animated animate__fadeInUp animate__delay-2s">
+                    <div class="discounts__card-media">
+                        <img class="discounts__card-img" src="img/Image1.png" alt="Greys Vage">
+                        <div class="discounts__card-badge">
+                            <span class="discounts__card-badge-value">10</span>
+                            <div class="discounts__card-badge-sale">
+                                <span class="discounts__card-badge-perc">%</span>
+                                <span class="discounts__card-badge-label">Off</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="discounts__card-content">
+                        <div class="discounts__card-title">Greys Vage</div>
+                        <div class="discounts__card-caption">6 Days Remaining</div>
+                    </div>
+                </div>
+                <div class="discounts__card animate__animated animate__fadeInUp animate__delay-3s">
+                    <div class="discounts__card-media">
+                        <img class="discounts__card-img" src="img/Image2.png" alt="Greys Vage">
+                        <div class="discounts__card-badge">
+                            <span class="discounts__card-badge-value">25</span>
+                            <div class="discounts__card-badge-sale">
+                                <span class="discounts__card-badge-perc">%</span>
+                                <span class="discounts__card-badge-label">Off</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="discounts__card-content">
+                        <div class="discounts__card-title">Greys Vage</div>
+                        <div class="discounts__card-caption">7 Days Remaining</div>
+                    </div>
+                </div>
+                <div class="discounts__card animate__animated animate__fadeInUp animate__delay-4s">
+                    <div class="discounts__card-media">
+                        <img class="discounts__card-img" src="img/Image3.png" alt="Greys Vage">
+                        <div class="discounts__card-badge">
+                            <span class="discounts__card-badge-value">20</span>
+                            <div class="discounts__card-badge-sale">
+                                <span class="discounts__card-badge-perc">%</span>
+                                <span class="discounts__card-badge-label">Off</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="discounts__card-content">
+                        <div class="discounts__card-title">Greys Vage</div>
+                        <div class="discounts__card-caption">8 Days Remaining</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <section class="how-it-works">
+        <div class="container">
+            <div class="how-it-works__content">
+                <h2 class="how-it-works__title animate__animated animate__fadeInDown">How does it work</h2>
+                <div class="how-it-works__steps">
+                    <div class="how-it-works__step animate__animated animate__zoomIn animate__delay-1s">
+                        <div class="how-it-works__step-icon">
+                            <img src="img/Icons.png" alt="Step 1">
+                        </div>
+                        <h3 class="how-it-works__step-title">Select location</h3>
+                        <p class="how-it-works__step-description">Choose the location where your food will be delivered.</p>
+                    </div>
+                    <div class="how-it-works__step animate__animated animate__zoomIn animate__delay-2s">
+                        <div class="how-it-works__step-icon">
+                            <img src="img/Icons1.png" alt="Step 2">
+                        </div>
+                        <h3 class="how-it-works__step-title">Choose order</h3>
+                        <p class="how-it-works__step-description">Check over hundreds of menus to pick your favorite food.</p>
+                    </div>
+                    <div class="how-it-works__step animate__animated animate__zoomIn animate__delay-3s">
+                        <div class="how-it-works__step-icon">
+                            <img src="img/Icons2.png" alt="Step 3">
+                        </div>
+                        <h3 class="how-it-works__step-title">Pay advanced</h3>
+                        <p class="how-it-works__step-description">It's quick, safe, and simple. Select several methods of payment.</p>
+                    </div>
+                    <div class="how-it-works__step animate__animated animate__zoomIn animate__delay-4s">
+                        <div class="how-it-works__step-icon">
+                            <img src="img/Icons3.png" alt="Step 4">
+                        </div>
+                        <h3 class="how-it-works__step-title">Enjoy meals</h3>
+                        <p class="how-it-works__step-description">Food is made and delivered directly to your home.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="popular-items">
+        <div class="container">
+            <div class="popular-items__content">
+                <h2 class="popular-items__title">Popular items</h2>
+                <div class="popular-items__grid">
+                    <div class="popular-items__card">
+                        <img class="popular-items__card-img" src="img/CheeseBurger.png" alt="Cheese Burger">
+                        <div class="popular-items__card-content">
+                            <h3 class="popular-items__card-title">Cheese Burger</h3>
+                            <div class="popular-items__card-addres">
+                                <img src="img/map-marker.png" class="popular-items__card-addresmarker" alt="map-marker">
+                                Burger Arena
+                            </div>
+                            <p class="popular-items__card-price">$3.88</p>
+                            <button class="popular-items__card-button">Order Now</button>
+                        </div>
+                    </div>
+                    <div class="popular-items__card">
+                        <img class="popular-items__card-img" src="img/ToffesCake.png" alt="Toffe’s Cake">
+                        <div class="popular-items__card-content">
+                            <h3 class="popular-items__card-title">Toffe’s Cake</h3>
+                            <div class="popular-items__card-addres">
+                                <img src="img/map-marker.png" class="popular-items__card-addresmarker" alt="map-marker">
+                                Top Sticks
+                            </div>
+                            <p class="popular-items__card-price">$4.00</p>
+                            <button class="popular-items__card-button">Order Now</button>
+                        </div>
+                    </div>
+                    <div class="popular-items__card">
+                        <img class="popular-items__card-img" src="img/Dancake.png" alt="Dancake">
+                        <div class="popular-items__card-content">
+                            <h3 class="popular-items__card-title">Dancake</h3>
+                            <div class="popular-items__card-addres">
+                                <img src="img/map-marker.png" class="popular-items__card-addresmarker" alt="map-marker">
+                                Cake World
+                            </div>
+                            <p class="popular-items__card-price">$1.99<p>
+                            <button class="popular-items__card-button">Order Now</button>
+                        </div>
+                    </div>
+                    <div class="popular-items__card">
+                        <img class="popular-items__card-img" src="img/CrispySandwitch.png" alt="Crispy Sandwitch">
+                        <div class="popular-items__card-content">
+                            <h3 class="popular-items__card-title">Crispy Sandwitch</h3>
+                            <div class="popular-items__card-addres">
+                                <img src="img/map-marker.png" class="popular-items__card-addresmarker" alt="map-marker">
+                                Fastfood Dine
+                            </div>
+                            <p class="popular-items__card-price">$3.00</p>
+                            <button class="popular-items__card-button">Order Now</button>
+                        </div>
+                    </div>
+                    <div class="popular-items__card">
+                        <img class="popular-items__card-img" src="img/ThaiSoup.png" alt="Thai Soup">
+                        <div class="popular-items__card-content">
+                            <h3 class="popular-items__card-title">Thai Soup</h3>
+                            <div class="popular-items__card-addres">
+                                <img src="img/map-marker.png" class="popular-items__card-addresmarker" alt="map-marker">
+                                Foody man
+                            </div>
+                            <p class="popular-items__card-price">$2.79</p>
+                            <button class="popular-items__card-button">Order Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="restaurants">
+        <div class="container">
+            <div class="restaurants__content">
+                <h2 class="restaurants__title">Featured Restaurants</h2>
+                <div class="restaurants__grid">
+                    <div class="restaurants__card">
+                        <div class="restaurants__card-media">
+                            <img src="img/rest1.png" alt="rest1">
+                            <div class="restaurants__card-badge">
+                                <div class="restaurants__card-sale">
+                                <img src="img/sale.png" alt="sale">
+                                20% off
+                                </div>
+                                <div class="restaurants__card-speed">
+                                    <img src="img/clock.png" alt="clock">
+                                    Fast
+                                </div>
+                            </div>
+                        </div>
+                        <div class="restaurants__card-restname">
+                            <img src="img/rlogo1.png" alt="rlogo1">
+                            <div class="restaurants__card-name">
+                                <p>Foodworld</p>
+                                <div class="restaurants__card-rating">
+                                    <img src="img/star.png" alt="star">
+                                    <p>46</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="restaurants__card-opentime">
+                            Opens tomorrow
+                        </div>
+                    </div>
+                    <div class="restaurants__card">
+                        <div class="restaurants__card-media">
+                            <img src="img/reat2.png" alt="rest2">
+                            <div class="restaurants__card-badge">
+                                <div class="restaurants__card-sale">
+                                <img src="img/sale.png" alt="sale">
+                                15% off
+                                </div>
+                                <div class="restaurants__card-speed">
+                                    <img src="img/clock.png" alt="clock">
+                                    Fast
+                                </div>
+                            </div>
+                        </div>
+                        <div class="restaurants__card-restname">
+                            <img src="img/rlogo2.png" alt="rlogo2">
+                            <div class="restaurants__card-name">
+                                <p>Pizzahub</p>
+                                <div class="restaurants__card-rating">
+                                    <img src="img/star.png" alt="star">
+                                    <p>40</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="restaurants__card-opentime">
+                            Opens tomorrow
+                        </div>
+                    </div>
+                    <div class="restaurants__card">
+                        <div class="restaurants__card-media">
+                            <img src="img/rest3.png" alt="rest3">
+                            <div class="restaurants__card-badge">
+                                <div class="restaurants__card-sale">
+                                <img src="img/sale.png" alt="sale">
+                                10% off
+                                </div>
+                                <div class="restaurants__card-speed">
+                                    <img src="img/clock.png" alt="clock">
+                                    Fast
+                                </div>
+                            </div>
+                        </div>
+                        <div class="restaurants__card-restname">
+                            <img src="img/rlogo3.png" alt="rlogo3">
+                            <div class="restaurants__card-name">
+                                <p>Donuts hut</p>
+                                <div class="restaurants__card-rating">
+                                    <img src="img/star.png" alt="star">
+                                    <p>20</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="restaurants__card-opentime restaurants__card-opentime--active">
+                            Open Now
+                        </div>
+                    </div>
+                    <div class="restaurants__card">
+                        <div class="restaurants__card-media">
+                            <img src="img/rest4.png" alt="rest4">
+                            <div class="restaurants__card-badge">
+                                <div class="restaurants__card-sale">
+                                <img src="img/sale.png" alt="sale">
+                                15% off
+                                </div>
+                                <div class="restaurants__card-speed">
+                                    <img src="img/clock.png" alt="clock">
+                                    Fast
+                                </div>
+                            </div>
+                        </div>
+                        <div class="restaurants__card-restname">
+                            <img src="img/rlogo4.png" alt="rlogo4">
+                            <div class="restaurants__card-name">
+                                <p>Donuts hut</p>
+                                <div class="restaurants__card-rating">
+                                    <img src="img/star.png" alt="star">
+                                    <p>50</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="restaurants__card-opentime restaurants__card-opentime--active">
+                            Open Now
+                        </div>
+                    </div>
+                    <div class="restaurants__card">
+                        <div class="restaurants__card-media">
+                            <img src="img/rest5.png" alt="rest5">
+                            <div class="restaurants__card-badge">
+                                <div class="restaurants__card-sale">
+                                <img src="img/sale.png" alt="sale">
+                                10% off
+                                </div>
+                                <div class="restaurants__card-speed">
+                                    <img src="img/clock.png" alt="clock">
+                                    Fast
+                                </div>
+                            </div>
+                        </div>
+                        <div class="restaurants__card-restname">
+                            <img src="img/rlogo5.png" alt="rlogo5">
+                            <div class="restaurants__card-name">
+                                <p>Ruby Tuesday</p>
+                                <div class="restaurants__card-rating">
+                                    <img src="img/star.png" alt="star">
+                                    <p>26</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="restaurants__card-opentime restaurants__card-opentime--active">
+                            Open Now
+                        </div>
+                    </div>
+                    <div class="restaurants__card">
+                        <div class="restaurants__card-media">
+                            <img src="img/rest6.png" alt="rest6">
+                            <div class="restaurants__card-badge">
+                                <div class="restaurants__card-sale">
+                                <img src="img/sale.png" alt="sale">
+                                25% off
+                                </div>
+                                <div class="restaurants__card-speed">
+                                    <img src="img/clock.png" alt="clock">
+                                    Fast
+                                </div>
+                            </div>
+                        </div>
+                        <div class="restaurants__card-restname">
+                            <img src="img/rlogo6.png" alt="rlogo6">
+                            <div class="restaurants__card-name">
+                                <p>Kuakata Fried Chicken</p>
+                                <div class="restaurants__card-rating ">
+                                    <img src="img/star.png" alt="star">
+                                    <p>53</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="restaurants__card-opentime restaurants__card-opentime--active">
+                            Open Now
+                        </div>
+                    </div>
+                    <div class="restaurants__card">
+                        <div class="restaurants__card-media">
+                            <img src="img/rest7.png" alt="rest7">
+                            <div class="restaurants__card-badge">
+                                <div class="restaurants__card-sale">
+                                <img src="img/sale.png" alt="sale">
+                                10% off
+                                </div>
+                                <div class="restaurants__card-speed">
+                                    <img src="img/clock.png" alt="clock">
+                                    Fast
+                                </div>
+                            </div>
+                        </div>
+                        <div class="restaurants__card-restname">
+                            <img src="img/rlogo7.png" alt="rlogo7">
+                            <div class="restaurants__card-name">
+                                <p>Red Square</p>
+                                <div class="restaurants__card-rating">
+                                    <img src="img/star.png" alt="star">
+                                    <p>45</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="restaurants__card-opentime restaurants__card-opentime--active">
+                            Open Now
+                        </div>
+                    </div>
+                    <div class="restaurants__card">
+                        <div class="restaurants__card-media">
+                            <img src="img/rest8.png" alt="rest8">
+                            <div class="restaurants__card-badge">
+                                <div class="restaurants__card-sale">
+                                <img src="img/sale.png" alt="sale">
+                                10% off
+                                </div>
+                                <div class="restaurants__card-speed">
+                                    <img src="img/clock.png" alt="clock">
+                                    Fast
+                                </div>
+                            </div>
+                        </div>
+                        <div class="restaurants__card-restname">
+                            <img src="img/rlogo8.png" alt="rlogo8">
+                            <div class="restaurants__card-name">
+                                <p>Taco Bell</p>
+                                <div class="restaurants__card-rating">
+                                    <img src="img/star.png" alt="star">
+                                    <p>35</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="restaurants__card-opentime restaurants__card-opentime--active">
+                            Open Now
+                        </div>
+                    </div>
+                </div>
+                <button class="restaurants__button">View All
+                    <img src="img/arrowsm.png" alt="arrow">
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="search">
+        <div class="container">
+            <div class="search__content">
+                <div class="search__header">
+                    <h2 class="search__title">Search by Food</h2>
+                    <div class="search__buttons">
+                        <button class="search__button">View All
+                            <img src="img/arrowy.png" alt="arrow">
+                        </button>
+                        <button class="search__button-left">
+                            <img src="img/arrow.png" alt="arrow">
+                        </button>
+                        <button class="search__button-right">
+                            <img src="img/arrow2.png" alt="arrow">
+                        </button>
+                    </div>
+                </div>
+                <div class="search__grid">
+                    <div class="search__card">
+                        <img src="img/pizza.png" alt="pizza">
+                        <p>Pizza</p>
+                    </div>
+                    <div class="search__card">
+                        <img src="img/burger.png" alt="burger">
+                        <p>Burger</p>
+                    </div>
+                    <div class="search__card">
+                        <img src="img/noodles.png" alt="noodles">
+                        <p>Noodles</p>
+                    </div>
+                    <div class="search__card">
+                        <img src="img/sub-sandiwch.png" alt="sub-sandiwch">
+                        <p>Sub-sandiwch</p>
+                    </div>
+                    <div class="search__card">
+                        <img src="img/chowmein.png" alt="chowmein">
+                        <p>Chowmein</p>
+                    </div>
+                    <div class="search__card">
+                        <img src="img/steak.png" alt="state">
+                        <p>Steak</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="features">
+        <div class="container">
+            <div class="features__content">
+                <div class="features__flex">
+                    <div class="features__card">
+                        <img src="img/discounts.png" alt="discounts">
+                        <p>Daily Discounts</p>
+                    </div>
+                    <hr class="features__line">
+                    <div class="features__card">
+                        <img src="img/tracing.png" alt="tracing">
+                        <p>Live Tracing</p>
+                    </div>
+                    <hr class="features__line">
+                    <div class="features__card">
+                        <img src="img/time.png" alt="time">
+                        <p>Quick Delivery</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="details">
+        <div class="container">
+            <div class="details__content">
+                <div class="details__card">
+                    <div class="details__card-info">
+                        <div class="details__card-title">
+                            <h2>Best deals <span>Crispy Sandwiches</span></h2>
+                            <p>Enjoy the large size of sandwiches. Complete perfect slice of sandwiches.</p>
+                        </div>
+                        <button class="details__card-button">
+                            Proceed to order
+                            <img src="img/arrowsm.png"  alt="arrow">
+                        </button>
+                    </div>
+                    <img src="img/samdw.png" class="details__card-img" alt="Sandwitch">
+                </div>
+                <div class="details__card details__card--left">
+                    <img src="img/chic.png" class="details__card-img" alt="chicken">
+                    <div class="details__card-info">
+                        <div class="details__card-title">
+                            <h2>Celebrate  parties with  <span>Fried Chicken</span></h2>
+                            <p>Get the best fried chicken smeared with a lip smacking lemon chili flavor. Check out best deals for fried chicken.</p>
+                        </div>
+                        <button class="details__card-button">
+                            Proceed to order
+                            <img src="img/arrowsm.png" alt="arrow">
+                        </button>
+                    </div>
+                </div>
+                <div class="details__card">
+                    <div class="details__card-info">
+                        <div class="details__card-title">
+                            <h2>Wanna eat hot & spicy <span>Pizza?</span></h2>
+                            <p>Pair up with a friend and enjoy the hot and crispy pizza pops. Try it with the best deals.</p>
+                        </div>
+                        <button class="details__card-button">
+                            Proceed to order
+                            <img src="img/arrowsm.png" alt="arrow">
+                        </button>
+                    </div>
+                    <img src="img/piz.png" class="details__card-img" alt="pizza">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <div class="cta__content">
+                <h2>Are you ready to order with the best deals?</h2>
+                <button>
+                    Proceed to order
+                    <img src="img/arrowsm.png" alt="arrow">
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__cities">
+                    <h4>Our top cities</h4>
+                    <div class="footer__city">
+                        <div class="footer__city-column">
+                            <a href="#" class="footer__city-link">San Francisco</a>
+                            <a href="#" class="footer__city-link">Miami</a>
+                            <a href="#" class="footer__city-link">San Diego</a>
+                            <a href="#" class="footer__city-link">East Bay</a>
+                            <a href="#" class="footer__city-link">Long Beach</a>
+                        </div>
+                        <div class="footer__city-column">
+                            <a href="#" class="footer__city-link">Los Angeles</a>
+                            <a href="#" class="footer__city-link">Washington DC</a>
+                            <a href="#" class="footer__city-link">Seattle</a>
+                            <a href="#" class="footer__city-link">Portland</a>
+                            <a href="#" class="footer__city-link">Nashville</a>
+                        </div>
+                        <div class="footer__city-column">
+                            <a href="#" class="footer__city-link">New York City</a>
+                            <a href="#" class="footer__city-link">Orange County</a>
+                            <a href="#" class="footer__city-link">Atlanta</a>
+                            <a href="#" class="footer__city-link">Charlotte</a>
+                            <a href="#" class="footer__city-link">Denver</a>
+                        </div>
+                        <div class="footer__city-column">
+                            <a href="#" class="footer__city-link">Chicago</a>
+                            <a href="#" class="footer__city-link">Phoenix</a>
+                            <a href="#" class="footer__city-link">Las Vegas</a>
+                            <a href="#" class="footer__city-link">Sacramento</a>
+                            <a href="#" class="footer__city-link">Oklahoma City</a>
+                        </div>
+                        <div class="footer__city-column">
+                            <a href="#" class="footer__city-link">Columbus</a>
+                            <a href="#" class="footer__city-link">New Mexico</a>
+                            <a href="#" class="footer__city-link">Albuquerque</a>
+                            <a href="#" class="footer__city-link">Sacramento</a>
+                            <a href="#" class="footer__city-link">New Orleans</a>
+                        </div>
+                    </div>
+                </div>  
+                <div class="footer__line"></div>
+                <div class="footer__company">
+                    <div class="footer__company-grid">
+                        <div class="footer__company-column">
+                            <h3 class="footer__title">Company</h3>
+                            <ul class="footer__list">
+                                <li><a href="#" class="footer__link">About us</a></li>
+                                <li><a href="#" class="footer__link">Team</a></li>
+                                <li><a href="#" class="footer__link">Careers</a></li>
+                                <li><a href="#" class="footer__link">Blog</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer__company-column">
+                            <h3 class="footer__title">Contact</h3>
+                            <ul class="footer__list">
+                                <li><a href="#" class="footer__link">Help & Support</a></li>
+                                <li><a href="#" class="footer__link">Partner with us</a></li>
+                                <li><a href="#" class="footer__link">Ride with us</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer__company-column">
+                            <h3 class="footer__title">Legal</h3>
+                            <ul class="footer__list">
+                                <li><a href="#" class="footer__link">Terms & Conditions</a></li>
+                                <li><a href="#" class="footer__link">Refund & Cancellation</a></li>
+                                <li><a href="#" class="footer__link">Privacy Policy</a></li>
+                                <li><a href="#" class="footer__link">Cookie Policy</a></li>
+                            </ul>
+                        </div>  
+                    </div>
+                    <div class="footer__subscribe">
+                        <div class="footer__follow">
+                            <h3 class="footer__follow-title">Follow us</h3>
+                            <div class="footer__social">
+                                <a href="#" class="footer__social-link"><img src="img/inst.png" alt="Instagram"></a>
+                                <a href="#" class="footer__social-link"><img src="img/fb.png" alt="FaceBook"></a>
+                                <a href="#" class="footer__social-link"><img src="img/twitter.png" alt="twitter"></a>
+                            </div>
+                        </div>
+                        <p class="footer__subscribe-text">Receive exclusive offers in your mailbox</p>
+                        <form class="footer__subscribe-form">
+                            <input type="email" placeholder="Enter Your email" class="footer__input">
+                            <button type="submit" class="footer__button">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="footer__line"></div>
+                <div class="footer__bottom">
+                    <div class="footer__copyright">
+                        <p>All rights Reserved <span class="footer__copyright-icon">©</span> <span class="footer__copyright-year">Your Company, 2021</span></p>
+                    </div>
+                    <div class="footer__credits">
+                        <p>Made with by <span>♥</span> <b>Themewagen</b></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
